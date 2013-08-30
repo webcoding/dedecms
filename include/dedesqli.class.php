@@ -39,13 +39,13 @@ class DedeSqli
     var $parameters;
     var $isClose;
     var $safeCheck;
-	var $showError=false;
+    var $showError=false;
     var $recordLog=false; // 记录日志到data/mysqli_record_log.inc便于进行调试
 	var $isInit=false;
 	var $pconnect=false;
 
     //用外部定义的变量初始类，并连接数据库
-    function __construct($pconnect=FALSE,$nconnect=FALSE)
+    function __construct($pconnect=FALSE,$nconnect=TRUE)
     {
         $this->isClose = FALSE;
         $this->safeCheck = TRUE;

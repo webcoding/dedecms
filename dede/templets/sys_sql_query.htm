@@ -67,7 +67,7 @@ while($row = $dsql->GetArray('t',MYSQL_BOTH))
               </table></td>
           </tr>
           <tr> 
-            <td height="200" align="center">返回信息：</td>
+            <td height="200" align="center" style="vertical-align:top">返回信息：</td>
             <td>
 			<iframe name="stafrm" frameborder="0" id="stafrm" width="100%" height="100%"></iframe>
 			</td>
@@ -98,5 +98,48 @@ while($row = $dsql->GetArray('t',MYSQL_BOTH))
 	 </td>
 </tr>
 </table>
+<div class="bd pd w95 m mtauto bgwhite"><p class="red">Dedecms 常用SQL语句 <strong class="notice">温馨提示 : 执行以下SQL语句时，请做好备份，以防万一。</strong></p>
+<p>将所有文章设置为仅动态: update #@__archives set ismake=-1;<br />
+将所有文章设置为仅静态: update #@_archives set ismake=1</p>
+<p>批量修改栏目为动态: update `#@__arctype` set `isdefault` = '-1'<br />
+批量修改栏目为静态: update `#@__arctype` set `isdefault` = '1'</p>
+<p>假如要ID =10 的栏目内 所有文章生成动态,其它全部为静态<br />
+执行SQL: update #@_archives set ismake=-1 where typeid=10</p>
+<p>批量审核所有文章：<br />
+Update `#@__arctiny` set arcrank='0' where arcrank='-1';
+Update `#@__archives` set arcrank='0' where arcrank='-1';</p>
+<p class="undis">批量删除所有未审核文章：<br />
+DELETE FROM #@__addonarticle where aid in(select id from #@__arctiny where arcrank='-1');
+DELETE FROM `#@__arctiny` where arcrank='-1';
+DELETE FROM `#@__archives` where arcrank='-1';
+</p>
+<p class="undis">批量删除所有内容为空的文章：<br />
+DELETE FROM #@__arctiny where id in(select aid from #@__addonarticle where body='');
+DELETE FROM #@__archives where id in(select aid from #@__addonarticle where body='');
+DELETE FROM #@__addonarticle where body='';</p>
+<p class="undis">批量删除所有标题为空的文章：<br />
+DELETE FROM #@__addonarticle where aid in(select id from #@__archives where title='');
+DELETE FROM #@__arctiny where id in(select id from #@__archives where title='');
+DELETE FROM #@__archives where where title='';</p>
+<p class="undis">批量删除所有文章：<br />
+DELETE FROM #@__addonarticle WHERE aid>0;
+DELETE FROM #@__arctiny WHERE id>0;
+DELETE FROM #@__archives WHERE id>0;</p>
+<p class="undis">删除所有注册会员及会员信息：<br />
+DELETE FROM `#@__member` WHERE `#@__member`.`mid`!= 1;
+TRUNCATE TABLE `#@__member_flink`; 
+TRUNCATE TABLE `#@__member_person`; 
+TRUNCATE TABLE `#@__member_space`; 
+TRUNCATE TABLE `#@__member_tj`;</p>
+</div>
+<div class="bd pd w95 m mtauto bgwhite"><p>经典SQL调用标签代码</p>
+<p>共有文章：*篇　{dede:sql sql="select count(*) as c from #@__archives where channel=1"}共有文章：[field:c /]篇{/dede:sql}<br />
+共有图集：*个　{dede:sql sql="select count(*) as c from #@__archives where channel=2"}共有图集：[field:c /]个{/dede:sql}</p>
+<p>共有软件：*个　{dede:sql sql="select count(*) as c from #@__archives where channel=3"}共有软件：[field:c /]个{/dede:sql}<br />共有评论：*条　{dede:sql sql="select count(*) as c from #@__feedback"}共有评论：[field:c /]条{/dede:sql}</p>
+<p>共有会员：*名　dede:sql sql="select count(mid) as c from #@__member"}共有会员：[field:c /]名{/dede:sql}<br />
+今日更新：*篇　{dede:sql sql="SELECT count( * ) AS c FROM #@__archives WHERE pubdate > UNIX_TIMESTAMP( CURDATE( ) ) "}今日更新：[field:c /]篇{/dede:sql}</p>
+<p>总共留言：*条　{dede:sql sql="select count(*) as cc From #@__guestbook"}[field:cc/]{/dede:sql}条总共留言：{dede:sql sql="select count(*) as cc From #@__guestbook"}[field:cc/]{/dede:sql}条<br />
+文章阅读：*人次　{dede:sql sql="select sum(click) as c from #@__archives"}文章阅读：[field:c /]人次{/dede:sql}</p>
+</div>
 </body>
 </html>

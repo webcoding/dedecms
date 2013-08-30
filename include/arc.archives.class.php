@@ -80,6 +80,14 @@ class Archives
                           LEFT JOIN #@__channeltype as ch on arc.channel = ch.id
                           WHERE arc.id='$aid' ";
                 $this->Fields = $this->dsql->GetOne($query);
+                //$this->Fields['arcurl'] = GetFileUrl(
+                //    $this->ArcID, $this->Fields["typeid"], $this->Fields["senddate"],
+                //    $this->Fields["title"], $this->Fields["ismake"],
+                //    $this->Fields["arcrank"], $this->TypeLink->TypeInfos['namerule'],
+                //    $this->TypeLink->TypeInfos['typedir'], $this->Fields["money"],
+                //    $this->Fields['filename'], $this->TypeLink->TypeInfos['moresite'],
+                //    $this->TypeLink->TypeInfos['siteurl'], $this->TypeLink->TypeInfos['sitepath']
+                //);
             }
             else
             {
@@ -129,6 +137,7 @@ class Archives
             }
 
             //为了减少重复查询，这里直接把附加表查询记录放在 $this->addTableRow 中，在 ParAddTable() 不再查询
+            //$this->Fields['wumiipic'] = strpos($this->Fields['litpic'], '/') === 0 ? ($GLOBALS['cfg_basehost'] . $this->Fields['litpic']) : $this->Fields['litpic'];
             if($this->ChannelUnit->ChannelInfos['addtable']!='')
             {
                 $query = "SELECT * FROM `{$this->ChannelUnit->ChannelInfos['addtable']}` WHERE `aid` = '$aid'";

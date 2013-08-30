@@ -122,7 +122,7 @@ function checkSubmit()
         <tr>
           <td width="90">&nbsp;TAG标签：</td>
           <td width="526">
-          	<input name="tags" type="text" id="tags" value="" style="width:300px" />(','号分开，单个标签小于12字节)
+          	<input name="tags" type="text" id="tags" value="" style="width:300px" onChange="$Obj('keywords').value=this.value;" onkeyup="this.value=this.value.replace(/，/g, ',');" />(','号分开，单个标签小于30字节)
           </td>
           <td width="47">权重：</td>
           <td width="122"><input name="weight" type="text" id="weight" style="width:50px" value="<?php echo $maxWright['cc'];?>" />(越小越靠前)</td>

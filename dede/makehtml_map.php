@@ -23,13 +23,13 @@ $sm = new SiteMap();
 $maplist = $sm->GetSiteMap($dopost);
 if($dopost=="site")
 {
-    $murl = $cfg_cmspath."/data/sitemap.html";
-    $tmpfile = $cfg_basedir.$cfg_templets_dir."/plus/sitemap.htm";
+    $murl = $cfg_cmspath."/sitemap.html";
+    $tmpfile = $cfg_basedir.$cfg_templets_dir.'/'.$cfg_df_style."/sitemap.htm";
 }
 else
 {
-    $murl = $cfg_cmspath."/data/rssmap.html";
-    $tmpfile = $cfg_basedir.$cfg_templets_dir."/plus/rssmap.htm";
+    $murl = $cfg_cmspath."/rssmap.html";
+    $tmpfile = $cfg_basedir.$cfg_templets_dir.'/'.$cfg_df_style."/rssmap.htm";
 }
 $dtp = new DedeTagParse();
 $dtp->LoadTemplet($tmpfile);

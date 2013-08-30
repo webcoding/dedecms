@@ -329,10 +329,10 @@ function PutInfo($msg1,$msg2)
     global $cfg_dir_purview,$cfg_soft_lang;
     $msginfo = "<html>\n<head>
         <meta http-equiv='Content-Type' content='text/html; charset={$cfg_soft_lang}' />
-        <title>DEDECMS 提示信息</title>
+        <title>创想小助手 提示信息</title>
         <base target='_self'/>\n</head>\n<body leftmargin='0' topmargin='0'>\n<center>
         <br/>
-        <div style='width:400px;padding-top:4px;height:24;font-size:10pt;border-left:1px solid #cccccc;border-top:1px solid #cccccc;border-right:1px solid #cccccc;background-color:#DBEEBD;'>DEDECMS 提示信息！</div>
+        <div style='width:400px;padding-top:4px;height:24;font-size:10pt;border-left:1px solid #cccccc;border-top:1px solid #cccccc;border-right:1px solid #cccccc;background-color:#DBEEBD;'>创想小助手 提示信息！</div>
         <div style='width:400px;height:100px;font-size:10pt;border:1px solid #cccccc;background-color:#F4FAEB'>
         <span style='line-height:160%'><br/>{$msg1}</span>
         <br/><br/></div>\r\n{$msg2}";

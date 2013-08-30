@@ -44,7 +44,7 @@ class DedeSql
 	var $pconnect=false;
 
     //用外部定义的变量初始类，并连接数据库
-    function __construct($pconnect=FALSE,$nconnect=FALSE)
+    function __construct($pconnect=FALSE,$nconnect=TRUE)
     {
         $this->isClose = FALSE;
         $this->safeCheck = TRUE;

@@ -98,7 +98,7 @@ class RssView
     function MakeRss($isremote=0)
     {
         global $cfg_remote_site;
-        $murl = $GLOBALS['cfg_cmspath']."/data/rss/".$this->TypeID.".xml";
+        $murl = $GLOBALS['cfg_cmspath']."/rss/".$this->TypeID.".xml";
         $mfile = $GLOBALS['cfg_basedir'].$murl;
         $this->dtp->SaveTo($mfile);
         //如果启用远程站点则上传

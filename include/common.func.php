@@ -179,7 +179,7 @@ function ShowMsg($msg, $gourl, $onlymsg=0, $limittime=0)
 {
     if(empty($GLOBALS['cfg_plus_dir'])) $GLOBALS['cfg_plus_dir'] = '..';
 
-    $htmlhead  = "<html>\r\n<head>\r\n<title>DedeCMS提示信息</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\" />\r\n";
+    $htmlhead  = "<html>\r\n<head>\r\n<title>创想小助手 提示信息</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\" />\r\n";
     $htmlhead .= "<base target='_self'/>\r\n<style>div{line-height:160%;}</style></head>\r\n<body leftmargin='0' topmargin='0' bgcolor='#FFFFFF'>".(isset($GLOBALS['ucsynlogin']) ? $GLOBALS['ucsynlogin'] : '')."\r\n<center>\r\n<script>\r\n";
     $htmlfoot  = "</script>\r\n</center>\r\n</body>\r\n</html>\r\n";
 
@@ -212,7 +212,7 @@ function ShowMsg($msg, $gourl, $onlymsg=0, $limittime=0)
       }\r\n";
         $rmsg = $func;
         $rmsg .= "document.write(\"<br /><div style='width:450px;padding:0px;border:1px solid #DADADA;'>";
-        $rmsg .= "<div style='padding:6px;font-size:12px;border-bottom:1px solid #DADADA;background:#DBEEBD url({$GLOBALS['cfg_plus_dir']}/img/wbg.gif)';'><b>DedeCMS 提示信息！</b></div>\");\r\n";
+        $rmsg .= "<div style='padding:6px;font-size:12px;border-bottom:1px solid #DADADA;background:#DBEEBD url({$GLOBALS['cfg_plus_dir']}/img/wbg.gif)';'><b>创想小助手 提示信息！</b></div>\");\r\n";
         $rmsg .= "document.write(\"<div style='height:130px;font-size:10pt;background:#ffffff'><br />\");\r\n";
         $rmsg .= "document.write(\"".str_replace("\"","“",$msg)."\");\r\n";
         $rmsg .= "document.write(\"";
@@ -262,6 +262,20 @@ function ResetVdValue()
     $_SESSION['securimage_code_value'] = '';
 }
 
+//function listtag($aid,$num) {//这段是修改添加的，注意更改表前缀与当前使用的数据库一致
+function listtag($aid) {
+      $dsql = $db = new DedeSqli(false);
+      $tags = "";
+	  $num = '4';
+      $dsql->SetQuery("Select i.tag From dede_taglist t left join dede_tagindex i on i.id=t.tid where t.aid='$aid'");
+      $dsql->Execute('t');
+	  for($i=0;$num!=0 && $i<$num && $row = $dsql->GetArray('t',MYSQL_ASSOC);$i++){
+		  $tags .= "<a href='/tags.php?/".urlencode($row['tag'])."/'>".$row['tag']."</a> ";}
+      //while($row = $dsql->GetArray('t',MYSQL_ASSOC)){
+      //   $tags .= "<a href='/tags.php?/".urlencode($row['tag'])."/'>".$row['tag']."</a> ";}
+	  ($tags != "") ? $tags : $tags = "have not";
+	  return $tags;
+}
 
 // 自定义函数接口
 // 这里主要兼容早期的用户扩展,v5.7之后我们建议使用小助手helper进行扩展

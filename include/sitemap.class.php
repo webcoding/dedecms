@@ -71,10 +71,10 @@ class SiteMap
             }
             else
             {
-                $typelink = $GLOBALS['cfg_cmsurl']."/data/rss/".$row->id.".xml";
+                $typelink = $GLOBALS['cfg_cmsurl']."/rss/".$row->id.".xml";
             }
-            $mapString .= "<div class=\"linkbox\">\r\n<h3><a href='$typelink'>".$row->typename."</a></h3>";
-            $mapString .= "\t<ul class=\"f6\">\t\t\r".$this->LogicListAllSunType($row->id,$maptype)."\t\n</ul></div>\r\n";
+            $mapString .= "<dt><a href='$typelink'>".$row->typename."</a>";
+            $mapString .= "<dd>".$this->LogicListAllSunType($row->id,$maptype)."</dd>";
             /*
             $mapString .= "<tr><td width='17%' align='center' bgcolor='#FAFEF1'>";
             $mapString .= "<a href='$typelink'><b>".$row->typename."</b></a>";
@@ -115,9 +115,9 @@ class SiteMap
             }
             else
             {
-                $typelink = $GLOBALS['cfg_cmsurl']."/data/rss/".$row->id.".xml";
+                $typelink = $GLOBALS['cfg_cmsurl']."/rss/".$row->id.".xml";
             }
-            $mapString .= "<li><a href='$typelink'>".$row->typename."</a></li>\n\t\t";
+            $mapString .= "<a href='$typelink'>".$row->typename."</a>";
             $mapString .= $this->LogicListAllSunType($row->id,$maptype);
         }
         return $mapString;

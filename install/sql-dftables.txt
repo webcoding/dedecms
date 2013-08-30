@@ -179,8 +179,8 @@ CREATE TABLE `#@__archives` (
   `arcrank` smallint(6) NOT NULL default '0',
   `click` mediumint(8) unsigned NOT NULL default '0',
   `money` smallint(6) NOT NULL default '0',
-  `title` char(60) NOT NULL default '',
-  `shorttitle` char(36) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `shorttitle` char(40) NOT NULL default '',
   `color` char(7) NOT NULL default '',
   `writer` char(20) NOT NULL default '',
   `source` char(30) NOT NULL default '',
@@ -188,7 +188,7 @@ CREATE TABLE `#@__archives` (
   `pubdate` int(10) unsigned NOT NULL default '0',
   `senddate` int(10) unsigned NOT NULL default '0',
   `mid` mediumint(8) unsigned NOT NULL default '0',
-  `keywords` char(30) NOT NULL default '',
+  `keywords` char(80) NOT NULL default '',
   `lastpost` int(10) unsigned NOT NULL default '0',
   `scores` mediumint(8) NOT NULL default '0',
   `goodpost` mediumint(8) unsigned NOT NULL default '0',
@@ -196,7 +196,7 @@ CREATE TABLE `#@__archives` (
   `voteid` mediumint(8) NOT NULL,
   `notpost` tinyint(1) unsigned NOT NULL default '0',
   `description` varchar(255) NOT NULL default '',
-  `filename` varchar(40) NOT NULL default '',
+  `filename` varchar(100) NOT NULL default '',
   `dutyadmin` mediumint(8) unsigned NOT NULL default '0',
   `tackid` int(10) NOT NULL default '0',
   `mtype` mediumint(8) unsigned NOT NULL default '0',
@@ -1137,7 +1137,7 @@ CREATE TABLE `#@__sysconfig` (
 DROP TABLE IF EXISTS `#@__tagindex`;
 CREATE TABLE `#@__tagindex` (
   `id` int(10) unsigned NOT NULL auto_increment,
-  `tag` char(12) NOT NULL default '',
+  `tag` char(30) NOT NULL default '',
   `typeid` smallint(5) unsigned NOT NULL default '0',
   `count` int(10) unsigned NOT NULL default '0',
   `total` int(10) unsigned NOT NULL default '0',
@@ -1155,7 +1155,7 @@ CREATE TABLE `#@__taglist` (
   `aid` int(10) unsigned NOT NULL default '0',
   `arcrank` smallint(6) NOT NULL default '0',
   `typeid` smallint(5) unsigned NOT NULL default '0',
-  `tag` varchar(12) NOT NULL default '',
+  `tag` varchar(30) NOT NULL default '',
   PRIMARY KEY  (`tid`,`aid`)
 ) TYPE=MyISAM;
 
