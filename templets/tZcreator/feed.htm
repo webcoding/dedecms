@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>{dede:global.cfg_webname/}</title>
+<link>{dede:global.cfg_basehost/}</link>
+<description>{dede:global.cfg_description/}</description>
+<language>zh-cn</language>
+<generator>{dede:global.cfg_webname/}</generator>
+<webmaster>{dede:global.cfg_adminemail/}</webmaster>
+{dede:arclist row='60′ col='1′ titlelen='100′ orderby='pubdate'}
+<item>
+<link>http://www.tcreator.info[field:arcurl/]</link>
+<title><![CDATA[[field:title function='html2text(@me)'/]]]></title>
+<author>[field:writer/]</author>
+<category>[field:typename/]</category>
+<pubDate>[field:pubdate function='strftime("%a, %d %b %Y %H:%M:%S +0800",@me)'/]</pubDate>
+<guid>http://www.tcreator.info[field:arcurl/]</guid>
+<description><![CDATA[[field:description function='html2text(@me)'/] … ]]></description>
+</item>
+{/dede:arclist}
+</channel>
+</rss>

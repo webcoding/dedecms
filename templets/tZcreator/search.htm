@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>搜索页_{dede:global.cfg_webname/}</title>
+{dede:include filename="meta_list.htm"/}
+</head>
+<body class="articlelist" style="min-width:1000px">
+{dede:include filename="head.htm"/}<!-- //header -->
+<div class="w960 center clear mt1">
+<div class="resultbar">搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果 </div>
+<div class="result_content">	
+	<div class="sidebar">
+        <h2>相关搜索</h2>
+        <ul>
+            <li>{dede:likewords num='10'/}</li>
+	    </ul>
+		<div class="sidebar_banner"><script src='/plus/ad_js.php?aid=16' language='javascript'></script></div>
+		<div class="aside_block"><script src='/plus/ad_js.php?aid=38' language='javascript'></script></div>
+    </div>
+		<div class="resultlist">
+		<div class="handle article_rand por"><script src='/plus/ad_js.php?aid=29' language='javascript'></script></div>
+			<ul>
+             {dede:list perpage='20'}
+				<li>      				
+					<h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+                    <p>[field:description/]...</p>
+					<span>
+					    <a href="[field:arcurl/]">[field:arcurl/]</a>
+						<small>分类：</small><a href="[field:typeurl/]" target="_blank">[field:typename/]</a>
+						<small>点击：</small>[field:click/]
+						<small>日期：</small>[field:stime/]
+					</span>
+				</li>
+			{/dede:list}
+			</ul>
+			<div class="fl dede_pages">
+			<ul class="pagelist">
+            	{dede:pagelist listsize='4'/}  
+			</ul>
+		</div><!-- /pages -->
+	</div><!-- /listbox -->
+</div>
+
+</div>
+<div class="ad clear" style="width:960px; margin:10px auto 0"><script src='/plus/ad_js.php?aid=31' language='javascript'></script></div>
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

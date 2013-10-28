@@ -1,0 +1,56 @@
+<div class="pright">
+  <dl class="tbox">
+   <dt><strong>栏目列表</strong></dt>
+   <dd>
+    <ul class="d6">
+     {dede:channel type='son' currentstyle="
+     <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
+     "}
+     <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+     {/dede:channel}
+    </ul>
+   </dd>
+  </dl>
+ <div id="google_search"></div>
+ <div id="listRtPicAD" class="ad_aside"><script src='/plus/ad_js.php?aid=11' language='javascript'></script></div>
+ <div class="commend">
+  <dl class="tbox light">
+   <dt class='light'><strong>推荐内容</strong></dt>
+   <dd class='light'>
+    <ul class="d4">
+     {dede:arclist flag='c' titlelen=42 row=6}
+     <li><a href="[field:arcurl/]">[field:title/]</a>
+      <p>[field:description function='cn_substr(@me,80)'/]...</p>
+     </li>
+     {/dede:arclist}
+    </ul>
+   </dd>
+  </dl>
+ </div>
+ <!-- /commend -->
+ <div id="listRtPicAD2" class="ad_aside"><script src='/plus/ad_js.php?aid=13' language='javascript'></script></div>
+  <div class="rand mt1">
+  <dl class="tbox light">
+   <dt class='light'><strong>随机推荐</strong></dt>
+   <dd class='light'>
+    <ul class="c1 ico2">
+	 <script src='/plus/mytag_js.php?aid=2&nocache=1' language='javascript'></script>
+    </ul>
+   </dd>
+  </dl>
+ </div>
+ <!-- /rand -->
+ <div class="hot mt1 light">
+  <dl class="tbox">
+   <dt class='light'><strong>热点内容</strong></dt>
+<dd class='light'>
+    <ul class="c1 ico2">
+     {dede:arclist row=10 titlelen=40 orderby=click}
+     <li><a href="[field:arcurl/]">[field:title/]</a></li>
+     {/dede:arclist}
+    </ul>
+   </dd>
+  </dl>
+ </div>
+</div>
+<!-- /pright -->

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/} {dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:field name='description'/}-{dede:global.cfg_description/}" />
+<link href="/static/style/base.css" rel="stylesheet" media="screen" />
+<link rel="canonical" href="{dede:global.cfg_basehost/}" />
+<base target="_blank" />
+</head>
+<body class="list_updated">
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<div class="w960 center clear mt1">
+ <div class="pleft">
+  <div class="place"> <strong>当前位置:</strong> <a href='http://tcreator.info/'>创想信息网</a> &gt <a href='/updated.html'>{dede:field.title/}<span id="updated_num">100</span>篇</a> <span style="color:red">本页面启用了<a href="/webSchool/UE/making-your-websites-greener.html" class="red">让你的网站更节能</a>效果</span></div>
+  <!-- /place -->
+  <div class="handle article_rand por"><script src='/plus/ad_js.php?aid=29' language='javascript'></script></div>
+  <dl class='dbox' id="item6">
+            <dt class='lside'></dt>
+            <dd id='listCount'></dd>
+        </dl>
+   <ol class="cnum">
+	<script src='/plus/mytag_js.php?aid=4&nocache=1' language='javascript'></script>
+   </ol>
+<div class="cbanner cleftb"><script src='/plus/ad_js.php?aid=31' language='javascript'></script></div>
+ </div>
+ <!-- /pleft -->
+  <div class="pright">
+ <div>
+<div class="rand mt1">
+  <dl class="tbox light">
+   <dt class='light'><strong>随机推荐</strong></dt>
+   <dd class='light'>
+    <ul class="c1 ico2">
+	 <script src='/plus/mytag_js.php?aid=2&nocache=1' language='javascript'></script>
+    </ul>
+   </dd>
+  </dl>
+ </div>
+ <!-- /rand -->
+ </div>
+ <div id="listRtPicAD" class="ad_aside"><script src='/plus/ad_js.php?aid=34' language='javascript'></script></div>
+ <div class="commend">
+  <dl class="tbox light">
+   <dt class='light'><strong>推荐内容</strong></dt>
+   <dd class='light'>
+    <ul class="d4">
+     {dede:arclist flag='c' titlelen=42 row=6}
+     <li><a href="[field:arcurl/]">[field:title/]</a>
+      <p>[field:description function='cn_substr(@me,80)'/]...</p>
+     </li>
+     {/dede:arclist}
+    </ul>
+   </dd>
+  </dl>
+ </div>
+ <!-- /commend -->
+ <div id="listRtPicAD2" class="ad_aside"><script src='/plus/ad_js.php?aid=35' language='javascript'></script></div>
+ <div class="hot mt1 light">
+  <dl class="tbox">
+   <dt class='light'><strong>热点内容</strong></dt>
+   <dd class='light'>
+    <ul class="c1 ico2">
+     {dede:arclist row=10 orderby=click}
+     <li><a href="[field:arcurl/]">[field:title/]</a></li>
+     {/dede:arclist}
+    </ul>
+   </dd>
+  </dl>
+ </div>
+</div>
+<!-- /pright -->
+</div>
+<div id="innerfooterAD"></div>
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+<script src="http://www.onlineleaf.com/savetheenvironment.js"></script>
+</html>
