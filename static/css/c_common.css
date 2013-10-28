@@ -1,0 +1,179 @@
+/*公用模块属性*/
+/* 保留扩展样式（以下类名等暂作保留，除符合以下样式外，尽量不要用于其他样式设置）
+------------------------------------------------------------ */
+/* 预加载图片路径*/
+#preloader {
+  background-image:url();
+ 	background-image:url();
+ 	background-image:url();
+ 	width:0px;
+ 	height:0px;
+ 	display:inline;
+}
+/* 网页布局常用模块命名 */
+#header{}
+#content{}
+#footer{}
+.main{}
+.aside{}
+/*幻灯宣传*/
+.promo{}
+
+/* 大图背景 */
+.bigimg{background:url(../images/img-loading.gif) no-repeat 50% 50%;}
+/* 间隔空白，源自腾讯首页 具备良好的兼容性组合性 */
+/* IE6下 div最小高度不能为0的解决方法overflow(否则即使设置 font-size:0 时这个容器的高度最小也为 2px) */
+.hr_a,.hr_b{font-size:1px;line-height:1px;display:block;clear:both;overflow:hidden}.hr_a{height:10px}.hr_b{height:5px}
+
+.B,.fb{font-weight:bold}.fnb{font-weight:normal}
+.tc{text-align:center}.tr{text-align:right}.dis{display:block}.undis{display:none}
+.p_rel{position:relative}.p_abs{position:absolute}
+
+/* 横向排列 */
+.hor li{display:inline;float:left;}.hor li a{display:block;float:left}
+/* 处理无背景的块状a标签在IE下失效的问题 */
+.disa a{display:block;width:100%;height:100%;background:url(about:blank);text-indent:-9999px;}
+
+/*M-列表分栏专用ul_list_box(P_index-list-article) M列表项*/
+.asbox{ padding:8px 10px 0; background:#F6F4E9;clear:both}
+.asbox .tva_t{padding-bottom:5px;border-bottom: 1px solid #CCC;}
+.asbox .tva_box{ padding:10px 10px 0;}
+.tva_box h4{clear:both; line-height:1.6}.tva_box h4 a{color:#E60}
+.list_2row,.list_3row,.list_4row{ overflow:hidden; zoom:1}
+.list_2row li,.list_3row li,.list_4row li{ float:left; display:inline;line-height:1.8; margin-bottom:5px;}
+.list_2row li{ width:49.9%}
+.list_3row li{ width:33.3%}
+.list_4row li{ width:24.9%}
+
+
+/* 这条分割线以上的属性作为保留样式，对其进行非以上属性的样式定义可能引起以后的模块公共样式提取的兼容性问题
+==================================================================================================== */
+
+/* 扩展参考（以下全站统一定制的公用模块参考区域，可针对需求进行规划）
+------------------------------------------------------------ */
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {display:none;}
+
+/* 提示框 -错误red，弹出，提醒yellow，成功green，一般信息 */
+.error,.alert,.notice,.success,.info{border:2px solid #ddd;margin-bottom:1em;padding:0.8em;}
+.error,.alert{background:#FBE3E4;border-color:#FBC2C4;color:#8A1F11;}
+.notice{background:#FFF6BF;border-color:#FFD324;color:#514721;}
+.success{background:#E6EFC2;border-color:#C6D880;color:#264409;}
+.info{background:#D5EDF8;border-color: #92CAE4;color:#205791;}
+.error a,.alert a{color:#8A1F11;}.notice a{color:#514721;}.success a{color:#264409;}.info a{color:#205791;}
+
+/*人人网的一个提示框*/
+.yellow-tip-box {
+    background: url("http://a.xnimg.cn/imgpro/icons/yes.png") no-repeat scroll 20px 8px #FFF9D7;
+    border: 1px solid #E2C822;
+    margin-bottom: 10px;
+    padding: 6px 10px 6px 45px;
+}
+.yellow-tip-box p {
+    color: #888888;
+    margin: 0 !important;
+}
+
+/* = form属性设置
+------------------------------------------------------------ */
+input[type="text"], input[type="password"], input[type="url"], input[type="email"], input.text, input.title, textarea {
+background-color:white;border: 1px solid #bbb;color:#black;}
+input[type="text"]:focus, input[type="password"]:focus, input[type="url"]:focus, input[type="email"]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
+select {background-color:white;border-style:solid;border-width:1px;}
+input[type="text"], input[type="password"], input[type="url"], input[type="email"], input.text, input.title, textarea, select {
+margin:0.5em 0;}
+input.text,input.title{padding:5px;width:300px;}
+
+a{color:#05A;}
+.a:visited {color:#7A94AE;}
+.a:hover {color:#f00;}
+
+.hor li{ float:left; display:inline}.hor li a{ float:left; display:block;}
+
+.close{ font-size:18px; border:1px solid #ddd; color:#ccc; text-align:center; width:20px; height:20px; line-height:20px; cursor:pointer; z-index:11}
+.close:hover{color:#666;border-color:#aaa}
+
+/*二次重置*/
+h1,h2,h3,h4{ font-weight:bold}
+body{font:12px/22px Verdana,Arial,Helvetica,sans-serif,\5b8b\4f53; color:#333}
+body{background: url(../images/bg.jpg) center top no-repeat;}
+
+.top-header{ height:50px;}
+.logo{ float:left; background:url(../images/logo.png) center no-repeat; width:126px; height:30px; padding:10px 0; text-indent:-9999px;}
+footer{ background:#222; padding:8px; color:#aaa}
+footer span{ float:right}
+footer a{ color:#aaa}
+.main{ width:714px; float:left}
+
+
+.main_nav { float:right; margin-top:10px;}
+.main_nav li{ float:left; display:inline}
+.main_nav li a{ padding:0 13px; display:block; line-height:30px; color:#C8F582}
+.main_nav li a.current{ background:#82CC00; color:#002503; font-weight:bold}
+.main_nav li a:hover{ background:#132e00; color:#aaa}
+
+.top_nav{ padding:8px 0}
+.special_menu{ }
+.special_menu a{display: block;float: left;color: black;margin: 0 9px 0 0px;}
+
+.top_banner{ display:none}
+
+.top_banner ul{ top:15px; left:8px;}
+.top_banner li{ width:75px; height:85px;}
+.top_banner .close{ right:5px; top:5px; display:none}
+.top_banner:hover .close{ display:block}
+/* M-列表组件*/
+.list_box{ margin-bottom:6px;}
+.list_box h4 {height: 23px;padding: 5px 8px 0 8px;color: #5F6E60;}
+.list_box h4 span{ float: right;font-weight: normal;}
+.list_box h4 a{color: #5F6E60;}
+
+.w_cbox h4 {background: url(../images/index_box_bg.gif);}
+.w_aside h4 {background: url(../images/side_tit_bg1.gif);}
+.w_cbox .li_a,.w_aside .li_a,.s_main{border: 1px solid #dadada;} 
+
+/*M-列表分栏组件（QQ列表，更多专题）*/
+.tv_asbox1 { padding:8px 10px 0; background:#F6F4E9;clear:both}
+.tv_asbox1 .tva_t{padding-bottom:5px;border-bottom: 1px solid #CCC;}
+.tv_asbox1 .tva_box{ padding:10px 10px 0;}
+.tva_box h4{clear:both; line-height:1.6}.tva_box h4 a{color:#E60}
+.list_2row,.list_3row,.list_4row{ overflow:hidden; zoom:1}
+.list_2row li,.list_3row li,.list_4row li{ float:left; display:inline;line-height:1.8; margin-bottom:5px;}
+.list_2row li{ width:49.9%}
+.list_3row li{ width:33.3%}
+.list_4row li{ width:24.9%}
+.list_5row li{ width:19.9%}
+
+/*ul列表样式*/
+.li_a{padding:8px 12px;background:white;}
+.li_a li{background: url(../images/icon3.gif) 0 7px no-repeat;height:24px;overflow:hidden;padding-left: 20px;line-height: 1.9;}
+.li_a li span{float: right;color: #393;}
+.li_soft{border: 1px solid #dadada; padding:4px;background:white;}
+.li_soft li { line-height:1.4; height:42px;}
+.li_soft li span { color:#999;}
+.li_soft li img { float:left; margin:2px 4px 0 0;}
+.list_pic { margin:0 8px 6px 0;}
+.list_pic h4 { height:23px; padding:5px 8px 0 8px; background:url(../images/index_pic_bg.gif); color:#5f6e60;}
+.list_pic h4 span { float:right; font-weight:normal;}
+.list_pic h4 span a { color:#5f6e60;}
+.list_pic ul { height:130px; border:1px solid #dadada; padding:15px 0px 10px 6px; background:#fff;}
+.list_pic ul li { width:160px; height:130px; overflow:hidden; float:left; margin-left:10px; display:inline;}
+.list_pic ul li img { display:block; border:1px solid #aaa;}
+.list_pic ul li a { display:block; text-align:center;}
+.list_pic ul li a:hover { text-decoration:none;}
+.list_pic ul li a:hover img { border:1px solid #666;}
+
+.li_qq i{color:#0c0}
+
+/* M-宽度组合*/
+.w_aside{width:250px}
+.w_bside{}
+.w_cside{}
+.s_main{width:448px; margin-right:8px;}
+.w_cbox{width:349px;float:left;display:inline;margin:0 8px 6px 0;}
+
+
+/*登陆状态*/
+#top_face dl{width:80px;float:left;padding: 1px 0 0 68px;}
+#top_face dt{width:50px;float:left;margin-left:-60px; display:inline}
+#top_face dd{}

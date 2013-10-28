@@ -1,0 +1,103 @@
+
+
+#index_topr { width:448px; float:right;}
+.top_news{ border-bottom:1px dashed #ccc; margin:8px 12px 0;background:#fff url(../images/mainbox_bg.gif) 0 0 repeat-x; >background-position:0 1px;padding-bottom:10px;}
+.top_news h1 { height:30px; padding-top:6px; font-size:20px; line-height:1.5; text-align:center; font-weight:normal; overflow:hidden;}
+.top_news h1 a { color:#333;}
+.top_news p { color:#666; margin:5px 0 0 0; line-height:150%;}
+.special_intro {border-top:1px solid #dadada; padding:8px 12px;}
+.special_intro { line-height:150%;}
+.special_intro img {float:left; display:inline; margin-right:10px;}
+.special_intro .intro { height:146px;}
+.special_intro .super { border-top:1px dashed #ccc; padding:8px 0 0 0; background:url(../images/youshi.gif) right bottom no-repeat;}
+
+/*学习引导*/
+.guide_simg img{ margin-bottom:6px;}
+
+/*专题样式 项目标识-special*/
+
+
+
+/* -------------------------------------------------------------- 
+-----------------------------------------------------------------
+
+	DEFINITIONS: 创想信息网
+	AUTHOR:      CloudYan
+	VERSION:     2012-01-15
+	
+	CONTENTS:
+	0. FONT-FACE (for perf)
+	
+	1. RESET
+	
+	2. DEFAULT ELEMENT STYLES
+		2.1 BODY
+		2.2 LINK STYLES
+		2.3 HEADINGS
+		2.4 OTHER ELEMENTS
+		2.5 QUOTES
+		
+	2. BASE
+		2.1 HEADER STYLES
+			2.1.1  Top Nav Styles
+			2.1.2  Main Nav Styles
+			2.1.3  Searchform Styles
+			2.1.4  Breadcrumbs
+	
+		2.2 POST STYLES
+			2.2.1  Post Header
+			2.2.2  Post Entry
+			2.2.3  Post Aside
+			2.2.4  Single Page Single Styles
+			2.2.5  Author Styles
+			
+		2.3 COMMENT STYLES
+		
+		2.4 COMMENT FORM STYLES
+	
+		2.5 HOMEPAGE STYLES			
+			2.5.1  Opener Styles
+			2.5.2  Glossary Styles
+			2.5.3  Small Post Styles
+			2.5.4  Pagination Styles
+			
+		2.6 SIDEBAR/SECONDARY STYLES
+			2.6.1  Lanyrd Styles
+			2.6.2  UI Tab Styles
+			
+		2.7 SUBFOOTER STYLES
+		
+		2.8 FOOTER STYLES
+		
+		
+	3. EXTRAS
+		3.1 FORMATTING STYLES
+			 3.1.1  Block Styles
+			 3.1.2  Sidenote Styles
+			 3.1.3  Column Styles
+			 3.1.4  Box Shadow Styles
+			 3.1.5  Align Styles
+			 3.1.6  Table Styles
+			 
+		3.2 BUTTON STYLES
+		
+		3.3 BROWSER SPECIFIC
+
+
+	4. GLOSSARY
+		
+	5. super-sekret oli.jp styles (were to be used as a base)
+-----------------------------------------------------------------
+-------------------------------------------------------------- */
+
+/*测试样式*/
+#header{height:100px; background:#ccc}
+#footer{height:50px; background:#ccc; text-align:center}
+#content{}
+.d1 b,.d2 b{ font-size:24px;}
+
+
+.d2 .m2{ background:green}
+.d2 .p2 .m2{ background:orange}
+.d2 .p2 .m5{ background:#FD8} 
+

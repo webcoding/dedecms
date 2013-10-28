@@ -1,0 +1,65 @@
+/* 全站级公用样式 */
+/* 清除浮动 */
+.clearfix:after,.wrap:after,.cwrap:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}
+.clearfix,.wrap,.cwrap{zoom:1}/* for IE6 IE7 */
+/* 空标签清除法 */
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+
+/* 要注意表单元素并不继承父级 font 的问题 根据自身需求设置 这里可以注意下建议在使用表单元素的时候再定义 */
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+blockquote,pre{white-space:pre-wrap;word-wrap:break-word;}
+
+/* 使Chrome支持12px以下的字体 */
+.text-size{-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+/* 两端对齐 */
+.text-justify{text-align:justify;text-justify:inter-ideograph;}
+/* 半透明 */
+.opacity {opacity:.5;filter:alpha(opacity=50);}
+/* 文本过长变成省略号，需要定义宽度 */
+.text-ell{display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+/* css3属性 */
+.css3_shadow{transition:all 1s ease-out 0s;border-radius:5px;box-shadow:0 0px 4px rgba(206, 201, 170, 0.8);}
+.css3_shadow:hover{box-shadow:0 0px 5px rgba(206, 201, 170, 1);}
+
+/* 定义全站级统一样式 */
+a:link{color:#05a}a:visited{color:#7a94ae}a:hover{color:#f00}.view_more{color:#06c;padding:0 2px;}
+.yahei{font-family:"Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","黑体"}
+
+/* 以下是模块化开发属性——模块化组合样式 
+------------------------------------------------------------ */
+/* 设置内联, 减少浮动带来的bug */
+.fl,.fr{display:inline}.fl{float:left;}.fr{float:right}
+/* 块状盒模型居中及内容居中 */
+bc{margin-left:auto;margin-right:auto;}.tc{text-align:center}
+
+/* 组合样式 */
+.f12{font-size:12px}.f14{font-size:14px}.f16{font-size:16px}.f18{font-size:18px}.f22{font-size:22px}.f24{font-size:24px}
+.lh18{line-height:18px}.lh20{line-height:20px}.lh22{line-height:22px}.lh24{line-height:24px}
+
+.mt10{margin-top:10px}.mt20{margin-top:20px}.mb10{margin-bottom:10px}.mb20{margin-bottom:20px}
+.ml10{margin-left:10px}.mr10{margin-right:10px}
+.pd10{padding:10px}.pt10{padding-top:10px}.pb10{padding-bottom:10px}.plr10{padding-left:10px;padding-right:10px}
+
+.wrap{width:980px; margin-left:auto; margin-right:auto}
+.cwrap{padding:8px 8px 0;margin-left:auto;margin-right:auto; background:white;}
+
+.pr{position:relative}.pa{ position:absolute}
+/*关于定位*/
+
+/* 这条分割线以上的属性会提取到全站级公用样式 common.css中
+==================================================================================================== */
+
+/*<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+<!--[if ie 6]>
+<script src="http://pic.lvmama.com/js/zt/DD_belatedPNG.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+*/
+
+ 
+/*
+在IE6/7中，overflow无法正确的隐藏有相对定位position:relative;的子元素：
+解决方法就是给外包容器 也加上position:relative;
+
+在IE6、IE7、IE8下，若浮动元素紧邻绝对定位元素的时候并且浮动元素设置了宽度，这样就会导致绝对定位元素"神秘失踪"。触发了IE的haslayout，解决方法就是取消这两个元素直接相邻
+------------------------------------------------------------ */
