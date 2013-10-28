@@ -196,7 +196,7 @@ CREATE TABLE `#@__archives` (
   `voteid` mediumint(8) NOT NULL,
   `notpost` tinyint(1) unsigned NOT NULL default '0',
   `description` varchar(255) NOT NULL default '',
-  `filename` varchar(100) NOT NULL default '',
+  `filename` varchar(120) NOT NULL default '',
   `dutyadmin` mediumint(8) unsigned NOT NULL default '0',
   `tackid` int(10) NOT NULL default '0',
   `mtype` mediumint(8) unsigned NOT NULL default '0',
