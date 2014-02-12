@@ -12,7 +12,7 @@ $menutype = 'mydede';
 $menutype_son = 'op';
 require_once DEDEINC.'/dedetemplate.class.php';
 
-$product = isset($product) ? trim($product) : '';
+$product = isset($product) ? trim(HtmlReplace($product,1)) : '';
 $mid = $cfg_ml->M_ID;
 $ptype = '';
 $pname = '';

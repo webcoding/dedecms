@@ -41,6 +41,8 @@ else if($action=='save')
     $msg = trimMsg(cn_substrR($msg, 1024), 1);
     $tid = empty($tid) ? 0 : intval($tid);
     $reid = empty($reid) ? 0 : intval($reid);
+    $img = HtmlReplace($img);
+    $needCheck=intval($needCheck);
 
     if($msg=='' || $uname=='') {
         showMsg('你的姓名和留言内容不能为空!','-1');

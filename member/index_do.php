@@ -390,7 +390,7 @@ else if($fmdo=='moodmsg')
           $content = cn_substrR(HtmlReplace($content,1),360);
           //对表情进行解析
           $content = addslashes(preg_replace("/\[face:(\d{1,2})\]/is","<img src='".$cfg_memberurl."/templets/images/smiley/\\1.gif' style='cursor: pointer; position: relative;'>",$content));
-          
+          $content = RemoveXSS($content);
             $inquery = "INSERT INTO `#@__member_msg`(`mid`,`userid`,`ip`,`ischeck`,`dtime`, `msg`)
                    VALUES ('{$cfg_ml->M_ID}','{$cfg_ml->M_LoginID}','$ip','$ischeck','$dtime', '$content'); ";
             $rs = $dsql->ExecuteNoneQuery($inquery);

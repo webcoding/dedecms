@@ -185,6 +185,9 @@ if($step == 1)
         $joinip = GetIP();
         $loginip = GetIP();
         $pwd = md5($userpwd);
+        $mtype = RemoveXSS(HtmlReplace($mtype,1));
+        $safeanswer = HtmlReplace($safeanswer);
+        $safequestion = HtmlReplace($safequestion);
         
         $spaceSta = ($cfg_mb_spacesta < 0 ? $cfg_mb_spacesta : 0);
         

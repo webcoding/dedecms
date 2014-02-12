@@ -127,7 +127,7 @@ if(!function_exists('IsWritable'))
 				return false;
 			}
 		}
-		//@chmod($pathfile,0777);
+		@chmod($pathfile,0777);
 		$fp = @fopen($pathfile,'ab');
 		if ($fp===false) return false;
 		fclose($fp);

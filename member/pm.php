@@ -12,6 +12,7 @@ require_once(dirname(__FILE__)."/config.php");
 CheckRank(0,0);
 $menutype = 'mydede';
 $menutype_son = 'pm';
+$id = isset($id)? intval($id) : 0;
 if($cfg_mb_lit=='Y')
 {
     ShowMsg('由于系统开启了精简版会员空间，你不能向其它会员发短信息，不过你可以向他留言！','-1');

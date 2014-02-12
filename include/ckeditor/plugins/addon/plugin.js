@@ -23,7 +23,7 @@ CKEDITOR.plugins.add( 'addon',
 		editor.ui.addButton( 'Addon',
 			{
 				label : '附件',
-				icon : 'http://desdevcms.com/images/addon.gif',
+				icon : 'images/addon.gif',
 				command : pluginName
 			});
 	}

@@ -58,6 +58,7 @@ elseif ($dopost == 'save')
         $mtypeidarr = array_filter($mtypeidarr, 'is_numeric');
         foreach($mtypeidarr as $delid)
         {
+            $delid = HtmlReplace($delid);
             $delids .= ','.$delid;
             unset($mtypename[$delid]);
         }
