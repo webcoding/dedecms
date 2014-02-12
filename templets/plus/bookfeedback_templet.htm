@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta charset="{dede:global.cfg_soft_lang/}" />
 <title>用户评论：{dede:global.title/}</title>
-<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/static/style/base.css" rel="stylesheet" media="screen" type="text/css" />
 <script language="javascript" type="text/javascript" src="../include/js/dedeajax2.js"></script>
 <script language="javascript">
 function postBadGood(ftype,fid)
@@ -48,7 +48,7 @@ function postBadGood(ftype,fid)
     <div class="top w960 center">
 
       <div class="title">
-        <h1> <a href="{dede:global.cfg_basehost/}/">{dede:global.cfg_webname/}</a> </h1>
+        <h1> <a href="{dede:global.cfg_basehost/}/">{dede:global.cfg_webname/}</a></h1>
       </div>
       <!-- /title -->
 		<div class="welcome">
@@ -110,7 +110,7 @@ function postBadGood(ftype,fid)
 	  <div class="decmt-box">
 			<div class="decmt-title">
 
-				<span class="moodico"><img src="{dede:global.cfg_templets_skin/}/images/mood/<?php if($fields['face']>0) echo "ico-mood-{$fields['face']}.gif"; ?>" />                </span>
+				<span class="moodico"><img src="/static/images/mood/<?php if($fields['face']>0) echo "ico-mood-{$fields['face']}.gif"; ?>" />                </span>
 				<span class="username"> {dede:field.username/}</span>
 				<span class="date"> 于 {dede:field.dtime function="MyDate('m-d H:i',@me)" /}</span>说到</div><!-- /decmt-title -->
 			<div class="decmt-act">
@@ -120,7 +120,7 @@ function postBadGood(ftype,fid)
 			</div><!-- /decmt-act -->
 			<div class="decmt-content">
 				{dede:field.msg function="Quote_replace(@me)"/}
-			<img src="{dede:global.cfg_templets_skin/}/images/{dede:field.bgimg/}" />
+			<img src="/static/images/{dede:field.bgimg/}" />
 			</div><!-- /decmt-content -->
 		</div><!-- /decmt-box -->
 
@@ -148,9 +148,9 @@ function postBadGood(ftype,fid)
 					</div><!-- /dcmp-title -->
 					<div class="dcmp-stand">
 						<strong>评价:</strong>
-							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="{dede:global.cfg_templets_skin/}/images/cmt-neu.gif" />中立</label>
-							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="{dede:global.cfg_templets_skin/}/images/cmt-good.gif" />好评</label>
-							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="{dede:global.cfg_templets_skin/}/images/cmt-bad.gif" />差评</label>
+							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="/static/images/cmt-neu.gif" />中立</label>
+							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="/static/images/cmt-good.gif" />好评</label>
+							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="/static/images/cmt-bad.gif" />差评</label>
 
 					</div><!-- /dcmp-stand -->
 					<div class="dcmp-content">
@@ -161,13 +161,13 @@ function postBadGood(ftype,fid)
 						<strong>表情:</strong>
 						<ul>
 
-								<li><input type="radio" name='face' value='6' checked="1" /><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-6.gif" /></li>
-								<li><input type="radio" name='face' value='4'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-4.gif" /></li>
-								<li><input type="radio" name='face' value='3'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-3.gif" /></li>
-								<li><input type="radio" name='face' value='5'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-5.gif" /></li>
-								<li><input type="radio" name='face' value='2'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-2.gif" /></li>
-								<li><input type="radio" name='face' value='1'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-1.gif" /></li>
-								<li><input type="radio" name='face' value='7'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-7.gif" /></li>
+								<li><input type="radio" name='face' value='6' checked="1" /><img src="/static/images/mood/ico-mood-6.gif" /></li>
+								<li><input type="radio" name='face' value='4'/><img src="/static/images/mood/ico-mood-4.gif" /></li>
+								<li><input type="radio" name='face' value='3'/><img src="/static/images/mood/ico-mood-3.gif" /></li>
+								<li><input type="radio" name='face' value='5'/><img src="/static/images/mood/ico-mood-5.gif" /></li>
+								<li><input type="radio" name='face' value='2'/><img src="/static/images/mood/ico-mood-2.gif" /></li>
+								<li><input type="radio" name='face' value='1'/><img src="/static/images/mood/ico-mood-1.gif" /></li>
+								<li><input type="radio" name='face' value='7'/><img src="/static/images/mood/ico-mood-7.gif" /></li>
 						</ul>
 					</div><!-- /dcmp-mood -->
 

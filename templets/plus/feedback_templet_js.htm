@@ -17,7 +17,7 @@
 ?>
 document.write("<div class='decmt-box'>");
 document.write("<div class='decmt-title'>");
-document.write("<span class='moodico'><img src='{dede:global.cfg_templeturl/}/images/mood/ico-mood-<?php if($fields['face']>0) echo $fields['face'];?>.gif'/></span>");
+document.write("<span class='moodico'><img src='/static/images/mood/ico-mood-<?php if($fields['face']>0) echo $fields['face'];?>.gif'/></span>");
 document.write("<span class='username'><a href='<?php echo $spaceurl;?>'>{dede:field.username/}</a></span>");
 document.write("<span class='date'>{dede:field.dtime function=GetDateMk(@me)/}</span>");
 document.write("<span>发表</span>");
@@ -27,7 +27,7 @@ document.write("<span id='goodfb{dede:field.id/}'><a href=#goodfb{dede:field.id/
 document.write("<span id='badfb{dede:field.id/}'><a href=#badfb{dede:field.id/} onclick=postBadGood('badfb',{dede:field.id/})>反对</a>[{dede:field.bad/}]</span>");
 document.write("<span><a href='/plus/feedback.php?fid={dede:field.id/}&action=quote'>引用</a></span>");
 document.write("</div>");
-document.write("<div class='decmt-content'>{dede:field.msg function='jstrim(@me,100)'/}<img src='{dede:global.cfg_templeturl/}/images/{dede:field.bgimg/}' alt='{dede:field.ftypetitle/}' />");
+document.write("<div class='decmt-content'>{dede:field.msg function='jstrim(@me,100)'/}<img src='/static/images/{dede:field.bgimg/}' alt='{dede:field.ftypetitle/}' />");
 document.write("</div>");
 document.write("</div>");
 {/dede:datalist}

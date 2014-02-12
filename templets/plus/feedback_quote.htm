@@ -1,15 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta charset="{dede:global.cfg_soft_lang/}" />
 <title>用户评论：<?php echo $row['arctitle'];?></title>
-<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/static/style/base.css" rel="stylesheet" media="screen" type="text/css" />
 </head>
 <body class="commentpage">
 <div class="header">
     <div class="top w960 center">
       <div class="title">
-       <h1><a href="{dede:global.cfg_basehost/}" title="{dede:global.cfg_webname/}"><img src="{dede:global.cfg_templets_skin/}/images/logo.gif" height="54" width="216" alt="{dede:global.cfg_webname/}"/></a> </h1>
+       <h1><a href="{dede:global.cfg_basehost/}" title="{dede:global.cfg_webname/}">{dede:global.cfg_webname/}</a></h1>
       </div>
       <!-- /title -->
 		<div class="welcome">
@@ -67,26 +67,26 @@
 					</div><!-- /dcmp-title -->
                     <div class="dcmp-stand">
 						<strong>评价:</strong>
-							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="{dede:global.cfg_templets_skin/}/images/cmt-neu.gif" />中立</label>
-							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="{dede:global.cfg_templets_skin/}/images/cmt-good.gif" />好评</label>
-							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="{dede:global.cfg_templets_skin/}/images/cmt-bad.gif" />差评</label>
+							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="/static/images/cmt-neu.gif" />中立</label>
+							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="/static/images/cmt-good.gif" />好评</label>
+							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="/static/images/cmt-bad.gif" />差评</label>
 					</div><!-- /dcmp-stand -->
                     <div class="clr"></div>
 					<div class="dcmp-mood">
 						<strong>表情:</strong>
 						<ul>
-							<li><input type="radio" name="face" value="1" checked="1" /><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-1.gif" /></li>
-                            <li><input type="radio" name="face" value="2"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-2.gif" /></li>
-                            <li><input type="radio" name="face" value="3"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-3.gif" /></li>
-                            <li><input type="radio" name="face" value="4"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-4.gif" /></li>
-                            <li><input type="radio" name="face" value="5"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-5.gif" /></li>
-                            <li><input type="radio" name="face" value="6"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-6.gif" /></li>
-                            <li><input type="radio" name="face" value="7"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-7.gif" /></li>
-                            <li><input type="radio" name="face" value="8"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-8.gif" /></li> 
-                            <li><input type="radio" name="face" value="9"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-9.gif" /></li>
-                            <li><input type="radio" name="face" value="10"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-10.gif" /></li>
-                            <li><input type="radio" name="face" value="11"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-11.gif" /></li> 
-                            <li><input type="radio" name="face" value="12"/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-12.gif" /></li>
+							<li><input type="radio" name="face" value="1" checked="1" /><img src="/static/images/mood/ico-mood-1.gif" /></li>
+                            <li><input type="radio" name="face" value="2"/><img src="/static/images/mood/ico-mood-2.gif" /></li>
+                            <li><input type="radio" name="face" value="3"/><img src="/static/images/mood/ico-mood-3.gif" /></li>
+                            <li><input type="radio" name="face" value="4"/><img src="/static/images/mood/ico-mood-4.gif" /></li>
+                            <li><input type="radio" name="face" value="5"/><img src="/static/images/mood/ico-mood-5.gif" /></li>
+                            <li><input type="radio" name="face" value="6"/><img src="/static/images/mood/ico-mood-6.gif" /></li>
+                            <li><input type="radio" name="face" value="7"/><img src="/static/images/mood/ico-mood-7.gif" /></li>
+                            <li><input type="radio" name="face" value="8"/><img src="/static/images/mood/ico-mood-8.gif" /></li> 
+                            <li><input type="radio" name="face" value="9"/><img src="/static/images/mood/ico-mood-9.gif" /></li>
+                            <li><input type="radio" name="face" value="10"/><img src="/static/images/mood/ico-mood-10.gif" /></li>
+                            <li><input type="radio" name="face" value="11"/><img src="/static/images/mood/ico-mood-11.gif" /></li> 
+                            <li><input type="radio" name="face" value="12"/><img src="/static/images/mood/ico-mood-12.gif" /></li>
 						</ul>
 					</div><!-- /dcmp-mood -->
 					
