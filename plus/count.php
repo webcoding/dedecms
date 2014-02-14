@@ -47,6 +47,7 @@ if(!empty($view))
     if(is_array($row))
     {
         echo "document.write('".$row['click']."');\r\n";
+        //echo 'document.getElementById("countnum").innerHTML='.$row['click'];//此处的修改是为了加快文章页面正文的加载速度，延迟js的阻塞
     }
 }
 exit();
